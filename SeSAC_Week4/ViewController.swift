@@ -16,6 +16,8 @@ struct Movie {
 
 class ViewController: UIViewController {
     
+    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var indicatorView: UIActivityIndicatorView!
     @IBOutlet var movieTableView: UITableView!
     var movieList: [Movie] = []
     
@@ -23,12 +25,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         movieTableView.dataSource = self
         movieTableView.delegate = self
+        searchBar.delegate = self
         movieTableView.rowHeight = 60
-        callRequest()
+        indicatorView.isHidden = true
     }
-    
-    func callRequest() {
-        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(APIKey.boxOfficeKey)&targetDt=20120101"
+    func callRequest(date: String) {
+        //네트워크 통신 전 인디케이터 보이게 하기
+        indicatorView.startAnimating()
+        indicatorView.isHidden = false
+        
+        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(APIKey.boxOfficeKey)&targetDt=\(date)"
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -49,6 +55,9 @@ class ViewController: UIViewController {
                     let data = Movie(movieTitle: movieNm, openDate: openDt)
                     self.movieList.append(data)
                 }
+                //갱신 전 다시 숨기기
+                self.indicatorView.stopAnimating()
+                self.indicatorView.isHidden = true
                 self.movieTableView.reloadData()
                 
             case .failure(let error):
@@ -56,7 +65,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -72,4 +80,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // 검색어가 8글자인지, 올바른 날짜 형식인지, 날짜 범주가 맞는지 체크 필요
+        movieList.removeAll()
+        
+        guard let text = searchBar.text else { return }
+        callRequest(date: text)
+    }
 }

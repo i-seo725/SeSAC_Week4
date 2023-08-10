@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vDm-ba-CiK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gKP-KY-I8a">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -57,21 +57,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4Bs-iE-SIb">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RTq-LM-dF1" firstAttribute="top" secondItem="yEq-KV-8xz" secondAttribute="bottom" id="D6s-Cr-PQf"/>
                             <constraint firstItem="yEq-KV-8xz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HUF-e8-hcF"/>
+                            <constraint firstItem="4Bs-iE-SIb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePl-M0-tJq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RTq-LM-dF1" secondAttribute="bottom" id="gq7-ye-xhv"/>
                             <constraint firstItem="yEq-KV-8xz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="icz-Ns-eYy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RTq-LM-dF1" secondAttribute="trailing" id="ohD-fn-ZMv"/>
+                            <constraint firstItem="4Bs-iE-SIb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pLX-L8-FCP"/>
                             <constraint firstItem="RTq-LM-dF1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tuo-mF-3kN"/>
                             <constraint firstItem="yEq-KV-8xz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y5h-RT-vxZ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicatorView" destination="4Bs-iE-SIb" id="cfA-m6-fmn"/>
                         <outlet property="movieTableView" destination="RTq-LM-dF1" id="PNX-MT-Qfy"/>
+                        <outlet property="searchBar" destination="yEq-KV-8xz" id="btx-OF-r0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -235,8 +242,73 @@
             </objects>
             <point key="canvasLocation" x="1104.5801526717557" y="-2.1126760563380285"/>
         </scene>
+        <!--Translate View Controller-->
+        <scene sceneID="5cs-H3-Q8j">
+            <objects>
+                <viewController id="gKP-KY-I8a" customClass="TranslateViewController" customModule="SeSAC_Week4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yjT-dA-iaF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DCa-yv-X7O">
+                                <rect key="frame" x="20" y="79" width="353" height="314.66666666666669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glz-Ch-lJl">
+                                <rect key="frame" x="20" y="413.66666666666669" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LTJ-Ri-oLs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="requestButtonClicked:" destination="gKP-KY-I8a" eventType="touchUpInside" id="jjR-ke-hkg"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bw5-rZ-ZlT">
+                                <rect key="frame" x="20" y="483.66666666666674" width="353" height="314.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BVX-ma-Ice"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bw5-rZ-ZlT" firstAttribute="leading" secondItem="BVX-ma-Ice" secondAttribute="leading" constant="20" id="3Jo-V0-tKe"/>
+                            <constraint firstItem="BVX-ma-Ice" firstAttribute="trailing" secondItem="Bw5-rZ-ZlT" secondAttribute="trailing" constant="20" id="6TU-d7-iGB"/>
+                            <constraint firstItem="Bw5-rZ-ZlT" firstAttribute="height" secondItem="DCa-yv-X7O" secondAttribute="height" id="BqJ-bU-wPV"/>
+                            <constraint firstItem="DCa-yv-X7O" firstAttribute="leading" secondItem="BVX-ma-Ice" secondAttribute="leading" constant="20" id="C7i-Jx-u9c"/>
+                            <constraint firstItem="Glz-Ch-lJl" firstAttribute="leading" secondItem="BVX-ma-Ice" secondAttribute="leading" constant="20" id="D1v-nY-y5D"/>
+                            <constraint firstItem="Glz-Ch-lJl" firstAttribute="top" secondItem="DCa-yv-X7O" secondAttribute="bottom" constant="20" id="GBF-sC-Jr2"/>
+                            <constraint firstItem="BVX-ma-Ice" firstAttribute="trailing" secondItem="DCa-yv-X7O" secondAttribute="trailing" constant="20" id="jrf-eN-g3k"/>
+                            <constraint firstItem="BVX-ma-Ice" firstAttribute="trailing" secondItem="Glz-Ch-lJl" secondAttribute="trailing" constant="20" id="p38-zv-6o2"/>
+                            <constraint firstItem="BVX-ma-Ice" firstAttribute="bottom" secondItem="Bw5-rZ-ZlT" secondAttribute="bottom" constant="20" id="wxX-6R-uYE"/>
+                            <constraint firstItem="DCa-yv-X7O" firstAttribute="top" secondItem="BVX-ma-Ice" secondAttribute="top" constant="20" id="xGP-CW-lGf"/>
+                            <constraint firstItem="Bw5-rZ-ZlT" firstAttribute="top" secondItem="Glz-Ch-lJl" secondAttribute="bottom" constant="20" id="zjC-kH-4qw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="requestButton" destination="Glz-Ch-lJl" id="QGh-az-SWF"/>
+                        <outlet property="sourceText" destination="DCa-yv-X7O" id="Ahz-uJ-hHM"/>
+                        <outlet property="targetText" destination="Bw5-rZ-ZlT" id="wpe-Xs-4xl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpf-Ht-4bu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="-2"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
