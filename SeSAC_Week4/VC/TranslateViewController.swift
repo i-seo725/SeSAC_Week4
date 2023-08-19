@@ -28,10 +28,22 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        sourceText.text = UserDefaultsHelper.standard.nickname
+        UserDefaults.standard.set("고래밥", forKey: "nickname")
+        UserDefaults.standard.set(33, forKey: "age")
+        
+        UserDefaultsHelper.standard.nickname = "은서"
+        UserDefaults.standard.string(forKey: "nickname")
+        UserDefaults.standard.integer(forKey: "age")
+        
         designView()
         sourceText.delegate = self
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        
     }
 
     func designView() {
@@ -79,24 +91,8 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func requestButtonClicked(_ sender: UIButton) {
-        let url = "https://openapi.naver.com/v1/papago/n2mt"
-        let header: HTTPHeaders = ["X-Naver-Client-Id": "\(APIKey.naverID)",
-                                   "X-Naver-Client-Secret": "\(APIKey.naverKey)"]
-        
-        let parameter: Parameters = ["source": self.langCode, "target": targetLang, "text": sourceText.text ?? ""]
-
-
-        AF.request(url, method: .post, parameters: parameter , headers: header).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-
-                let data = json["message"]["result"]["translatedText"].stringValue
-                self.targetText.text = data
-            case .failure(let error):
-                print(error)
-            }
+        TranslateAPIManager.share.callRequest(code: langCode, language: targetLang, text: sourceText.text ?? "") { result in
+            self.targetText.text = result
         }
         view.endEditing(true)
     }

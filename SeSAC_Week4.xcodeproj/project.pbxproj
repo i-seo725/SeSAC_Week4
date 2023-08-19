@@ -10,6 +10,21 @@
 		F41A4B0B2A81C4D400CDD95E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B0A2A81C4D400CDD95E /* WeatherViewController.swift */; };
 		F41A4B0D2A81E78200CDD95E /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B0C2A81E78200CDD95E /* VideoViewController.swift */; };
 		F41A4B152A83230B00CDD95E /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B142A83230B00CDD95E /* VideoTableViewCell.swift */; };
+		F41A4B262A85BA9700CDD95E /* ResuableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B252A85BA9700CDD95E /* ResuableViewProtocol.swift */; };
+		F41A4B282A85BCF900CDD95E /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B272A85BCF900CDD95E /* UserDefaultHelper.swift */; };
+		F41A4B2A2A85C51000CDD95E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B292A85C51000CDD95E /* Endpoint.swift */; };
+		F41A4B2C2A85C5C900CDD95E /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B2B2A85C5C900CDD95E /* URL+Extension.swift */; };
+		F41A4B2E2A85C77B00CDD95E /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B2D2A85C77B00CDD95E /* KakaoAPIManager.swift */; };
+		F41A4B302A85E35E00CDD95E /* TranslateAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B2F2A85E35E00CDD95E /* TranslateAPIManager.swift */; };
+		F41A4B322A85F9EB00CDD95E /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B312A85F9EB00CDD95E /* AsyncViewController.swift */; };
+		F41A4B602A8A02DC00CDD95E /* codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A4B5F2A8A02DC00CDD95E /* codable.swift */; };
+		F4448FDD2A8E13EE008E76B9 /* VideoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4448FDC2A8E13EE008E76B9 /* VideoStruct.swift */; };
+		F4448FEC2A8EF035008E76B9 /* The Jamsil OTF 5 Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4448FE62A8EF035008E76B9 /* The Jamsil OTF 5 Bold.otf */; };
+		F4448FED2A8EF035008E76B9 /* The Jamsil OTF 6 ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4448FE72A8EF035008E76B9 /* The Jamsil OTF 6 ExtraBold.otf */; };
+		F4448FEE2A8EF035008E76B9 /* The Jamsil OTF 2 Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4448FE82A8EF035008E76B9 /* The Jamsil OTF 2 Light.otf */; };
+		F4448FEF2A8EF035008E76B9 /* The Jamsil OTF 4 Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4448FE92A8EF035008E76B9 /* The Jamsil OTF 4 Medium.otf */; };
+		F4448FF02A8EF035008E76B9 /* The Jamsil OTF 3 Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4448FEA2A8EF035008E76B9 /* The Jamsil OTF 3 Regular.otf */; };
+		F4448FF12A8EF035008E76B9 /* The Jamsil OTF 1 Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4448FEB2A8EF035008E76B9 /* The Jamsil OTF 1 Thin.otf */; };
 		F456D3A52A80965D00E71E67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456D3A42A80965D00E71E67 /* AppDelegate.swift */; };
 		F456D3A72A80965D00E71E67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456D3A62A80965D00E71E67 /* SceneDelegate.swift */; };
 		F456D3A92A80965D00E71E67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456D3A82A80965D00E71E67 /* ViewController.swift */; };
@@ -27,7 +42,22 @@
 /* Begin PBXFileReference section */
 		F41A4B0A2A81C4D400CDD95E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		F41A4B0C2A81E78200CDD95E /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		F41A4B142A83230B00CDD95E /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		F41A4B142A83230B00CDD95E /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoTableViewCell.swift; path = SeSAC_Week4/Cell/VideoTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		F41A4B252A85BA9700CDD95E /* ResuableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResuableViewProtocol.swift; path = SeSAC_Week4/Protocol/ResuableViewProtocol.swift; sourceTree = SOURCE_ROOT; };
+		F41A4B272A85BCF900CDD95E /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
+		F41A4B292A85C51000CDD95E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = SeSAC_Week4/Enum/Endpoint.swift; sourceTree = SOURCE_ROOT; };
+		F41A4B2B2A85C5C900CDD95E /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		F41A4B2D2A85C77B00CDD95E /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
+		F41A4B2F2A85E35E00CDD95E /* TranslateAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslateAPIManager.swift; path = SeSAC_Week4/Class/TranslateAPIManager.swift; sourceTree = SOURCE_ROOT; };
+		F41A4B312A85F9EB00CDD95E /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AsyncViewController.swift; path = SeSAC_Week4/VC/AsyncViewController.swift; sourceTree = SOURCE_ROOT; };
+		F41A4B5F2A8A02DC00CDD95E /* codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codable.swift; sourceTree = "<group>"; };
+		F4448FDC2A8E13EE008E76B9 /* VideoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStruct.swift; sourceTree = "<group>"; };
+		F4448FE62A8EF035008E76B9 /* The Jamsil OTF 5 Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Jamsil OTF 5 Bold.otf"; sourceTree = "<group>"; };
+		F4448FE72A8EF035008E76B9 /* The Jamsil OTF 6 ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Jamsil OTF 6 ExtraBold.otf"; sourceTree = "<group>"; };
+		F4448FE82A8EF035008E76B9 /* The Jamsil OTF 2 Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Jamsil OTF 2 Light.otf"; sourceTree = "<group>"; };
+		F4448FE92A8EF035008E76B9 /* The Jamsil OTF 4 Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Jamsil OTF 4 Medium.otf"; sourceTree = "<group>"; };
+		F4448FEA2A8EF035008E76B9 /* The Jamsil OTF 3 Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Jamsil OTF 3 Regular.otf"; sourceTree = "<group>"; };
+		F4448FEB2A8EF035008E76B9 /* The Jamsil OTF 1 Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Jamsil OTF 1 Thin.otf"; sourceTree = "<group>"; };
 		F456D3A12A80965D00E71E67 /* SeSAC_Week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F456D3A42A80965D00E71E67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F456D3A62A80965D00E71E67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +85,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4448FDE2A8E62B9008E76B9 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				F41A4B5F2A8A02DC00CDD95E /* codable.swift */,
+				F4448FDC2A8E13EE008E76B9 /* VideoStruct.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+		F4448FDF2A8E62FD008E76B9 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F41A4B2D2A85C77B00CDD95E /* KakaoAPIManager.swift */,
+				F41A4B2F2A85E35E00CDD95E /* TranslateAPIManager.swift */,
+				F41A4B272A85BCF900CDD95E /* UserDefaultHelper.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F4448FE02A8E6320008E76B9 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F41A4B312A85F9EB00CDD95E /* AsyncViewController.swift */,
+				F456D3A82A80965D00E71E67 /* ViewController.swift */,
+				F456D3C32A809C2B00E71E67 /* TranslateViewController.swift */,
+				F41A4B0C2A81E78200CDD95E /* VideoViewController.swift */,
+				F41A4B0A2A81C4D400CDD95E /* WeatherViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		F4448FE12A8E6346008E76B9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F41A4B252A85BA9700CDD95E /* ResuableViewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F4448FE22A8E6356008E76B9 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				F41A4B292A85C51000CDD95E /* Endpoint.swift */,
+				F456D3C52A809C5800E71E67 /* APIKey.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		F4448FE32A8E636F008E76B9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F41A4B2B2A85C5C900CDD95E /* URL+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F4448FE42A8E637D008E76B9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F41A4B142A83230B00CDD95E /* VideoTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F4448FE52A8EEFF1008E76B9 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F4448FEB2A8EF035008E76B9 /* The Jamsil OTF 1 Thin.otf */,
+				F4448FE82A8EF035008E76B9 /* The Jamsil OTF 2 Light.otf */,
+				F4448FEA2A8EF035008E76B9 /* The Jamsil OTF 3 Regular.otf */,
+				F4448FE92A8EF035008E76B9 /* The Jamsil OTF 4 Medium.otf */,
+				F4448FE62A8EF035008E76B9 /* The Jamsil OTF 5 Bold.otf */,
+				F4448FE72A8EF035008E76B9 /* The Jamsil OTF 6 ExtraBold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		F456D3982A80965D00E71E67 = {
 			isa = PBXGroup;
 			children = (
@@ -74,19 +181,21 @@
 		F456D3A32A80965D00E71E67 /* SeSAC_Week4 */ = {
 			isa = PBXGroup;
 			children = (
-				F41A4B142A83230B00CDD95E /* VideoTableViewCell.swift */,
+				F4448FE52A8EEFF1008E76B9 /* Font */,
+				F4448FE42A8E637D008E76B9 /* Cell */,
+				F4448FE32A8E636F008E76B9 /* Extension */,
+				F4448FE22A8E6356008E76B9 /* Enum */,
+				F4448FE12A8E6346008E76B9 /* Protocol */,
+				F4448FE02A8E6320008E76B9 /* VC */,
+				F4448FDF2A8E62FD008E76B9 /* Class */,
+				F4448FDE2A8E62B9008E76B9 /* Struct */,
 				F456D3A42A80965D00E71E67 /* AppDelegate.swift */,
 				F456D3A62A80965D00E71E67 /* SceneDelegate.swift */,
-				F456D3A82A80965D00E71E67 /* ViewController.swift */,
-				F456D3C32A809C2B00E71E67 /* TranslateViewController.swift */,
 				F456D3AA2A80965D00E71E67 /* Main.storyboard */,
-				F41A4B0C2A81E78200CDD95E /* VideoViewController.swift */,
-				F41A4B0A2A81C4D400CDD95E /* WeatherViewController.swift */,
 				F456D3AD2A80965E00E71E67 /* Assets.xcassets */,
 				F456D3AF2A80965E00E71E67 /* LaunchScreen.storyboard */,
 				F456D3B22A80965E00E71E67 /* Info.plist */,
 				F456D3C12A809B9900E71E67 /* .gitignore */,
-				F456D3C52A809C5800E71E67 /* APIKey.swift */,
 			);
 			path = SeSAC_Week4;
 			sourceTree = "<group>";
@@ -159,10 +268,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4448FF02A8EF035008E76B9 /* The Jamsil OTF 3 Regular.otf in Resources */,
 				F456D3C22A809B9900E71E67 /* .gitignore in Resources */,
+				F4448FEF2A8EF035008E76B9 /* The Jamsil OTF 4 Medium.otf in Resources */,
+				F4448FEC2A8EF035008E76B9 /* The Jamsil OTF 5 Bold.otf in Resources */,
+				F4448FED2A8EF035008E76B9 /* The Jamsil OTF 6 ExtraBold.otf in Resources */,
 				F456D3B12A80965E00E71E67 /* LaunchScreen.storyboard in Resources */,
 				F456D3AE2A80965E00E71E67 /* Assets.xcassets in Resources */,
 				F456D3AC2A80965D00E71E67 /* Main.storyboard in Resources */,
+				F4448FF12A8EF035008E76B9 /* The Jamsil OTF 1 Thin.otf in Resources */,
+				F4448FEE2A8EF035008E76B9 /* The Jamsil OTF 2 Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,13 +288,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4448FDD2A8E13EE008E76B9 /* VideoStruct.swift in Sources */,
 				F456D3A92A80965D00E71E67 /* ViewController.swift in Sources */,
 				F41A4B0D2A81E78200CDD95E /* VideoViewController.swift in Sources */,
+				F41A4B602A8A02DC00CDD95E /* codable.swift in Sources */,
 				F41A4B0B2A81C4D400CDD95E /* WeatherViewController.swift in Sources */,
 				F456D3C42A809C2B00E71E67 /* TranslateViewController.swift in Sources */,
 				F456D3A52A80965D00E71E67 /* AppDelegate.swift in Sources */,
+				F41A4B302A85E35E00CDD95E /* TranslateAPIManager.swift in Sources */,
+				F41A4B2E2A85C77B00CDD95E /* KakaoAPIManager.swift in Sources */,
+				F41A4B2C2A85C5C900CDD95E /* URL+Extension.swift in Sources */,
 				F41A4B152A83230B00CDD95E /* VideoTableViewCell.swift in Sources */,
+				F41A4B322A85F9EB00CDD95E /* AsyncViewController.swift in Sources */,
+				F41A4B282A85BCF900CDD95E /* UserDefaultHelper.swift in Sources */,
+				F41A4B262A85BA9700CDD95E /* ResuableViewProtocol.swift in Sources */,
 				F456D3A72A80965D00E71E67 /* SceneDelegate.swift in Sources */,
+				F41A4B2A2A85C51000CDD95E /* Endpoint.swift in Sources */,
 				F456D3C62A809C5800E71E67 /* APIKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
